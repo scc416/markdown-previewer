@@ -17,7 +17,7 @@ const App = () => {
       >
         <div
           id="left"
-          // style = {{ width: this.props.position.toString() + "%"}}
+          style = {{ width: position + "%"}}
         >
           <div className="editor-title">
             <i className="far fa-edit"></i> Editor
@@ -30,7 +30,7 @@ const App = () => {
         </div>
         <div
           id="border"
-          // style = {{left: this.props.position.toString() + "%"}}
+          style = {{left: position + "%"}}
           // onMouseDown = {this.props.dragStart}
         >
           <div className="textbox">
@@ -39,7 +39,7 @@ const App = () => {
         </div>
         <div
           id="right"
-          // style={{ width: (100 - this.props.position).toString() + "%" }}
+          style={{ width: (100 - position) + "%" }}
         >
           <div className="previewer-title">
             <i className="fas fa-eye"></i> Preview
