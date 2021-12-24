@@ -7,7 +7,7 @@ const createMarkup = (__html) => {
 };
 
 const App = () => {
-  const { code, position } = useData();
+  const { code, position, updateInput } = useData();
   return (
     <div id="app">
       <div
@@ -25,7 +25,7 @@ const App = () => {
           <textarea
             id="editor"
             value={code}
-            // onChange={this.props.update}
+            onChange={updateInput}
           ></textarea>
         </div>
         <div

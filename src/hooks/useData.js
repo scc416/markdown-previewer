@@ -35,7 +35,12 @@ const useData = () => {
 
   const { code, position } = state;
 
-  return { code, position };
+  const updateInput = (event) => {
+    const code = event.target.value;
+    dispatch({ type: UPDATE, code });
+  };
+
+  return { code, position, updateInput };
 };
 
 export default useData;
