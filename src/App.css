@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+/* override browser default */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* use viewport-relative units to cover page fully */
+body {
+  height: 100vh;
+  width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* include border and padding in element width and height */
+* {
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+img {
+  max-width: 100%;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+#left {
+  padding: 10px 10px 10px 5px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #b8d1e0;
+}
+
+#right {
+  padding: 10px 5px 10px 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #85aed0;
+}
+
+#editor {
+  resize: none;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
   color: white;
+  background-color: #192740;
+  font-family: Source Code Pro;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+#preview {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  font-family: Roboto;
+  margin: 0px;
+  padding: 20px 10px 10px 10px;
+  background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+code {
+  font-family: Source Code Pro;
+}
+
+.editor-title {
+  text-align: center;
+  font-size: 16px;
+  font-family: Source Code Pro;
+  padding: 5px;
+  user-select: none;
+}
+
+.previewer-title {
+  position: absolute;
+  background-color: #85aed0;
+  padding: 8px 12px 8px 8px;
+  font-family: Source Code Pro;
+  top: 0px;
+  font-size: 16px;
+  user-select: none;
+}
+
+#border {
+  height: 100%;
+  background-color: #4b6d90;
+  width: 10px;
+  z-index: 1;
+  cursor: col-resize;
+}
+
+.textbox {
+  writing-mode: vertical-rl;
+  position: fixed;
+  bottom: 2%;
+  background-color: #4b6d90;
+  color: white;
+  padding: 5px 5px 10px 5px;
+  vertical-align: center;
+  font-family: Roboto;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.fa-arrows-alt-h {
+  animation-name: rotate;
+  animation-duration: 750ms;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+
+@keyframes rotate {
+  0% {
+    top: 2%;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    top: -2%;
+  }
+  100% {
+    top: 2%;
   }
 }
