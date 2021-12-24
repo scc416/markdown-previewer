@@ -7,48 +7,40 @@ const createMarkup = (__html) => {
 };
 
 const App = () => {
-  const { code, position, updateInput } = useData();
+  const { code, position, updateInput, dragStart, dragMove, dragEnd } =
+    useData();
   return (
     <div id="app">
-      <div
-        className="container"
-        onMouseMove={() => console.log("onMouseMove")} // onMouseMove = { this.props.dragMove }
-        onMouseUp={() => console.log("onMouseUp")} // onMouseUp = { this.props.dragEnd }
-      >
-        <div
-          id="left"
-          style = {{ width: position + "%"}}
-        >
+      <div className="container" onMouseMove={dragMove()} onMouseUp={dragEnd}>
+        <div id="left" style={{ width: position + "%" }}>
           <div className="editor-title">
             <i className="far fa-edit"></i> Editor
           </div>
-          <textarea
-            id="editor"
-            value={code}
-            onChange={updateInput}
-          ></textarea>
+          <textarea id="editor" value={code} onChange={updateInput}></textarea>
         </div>
         <div
           id="border"
-          style = {{left: position + "%"}}
-          // onMouseDown = {this.props.dragStart}
+          style={{ left: position + "%" }}
+          onMouseDown={dragStart}
+          onTouchStart={dragStart}
+          onTouchMove={dragMove(true)}
+          onTouchEnd={dragEnd}
         >
           <div className="textbox">
             <i className="fas fa-arrows-alt-h"></i>DRAG ME
           </div>
         </div>
-        <div
-          id="right"
-          style={{ width: (100 - position) + "%" }}
-        >
+        <div id="right" style={{ width: 100 - position + "%" }}>
           <div className="previewer-title">
             <i className="fas fa-eye"></i> Preview
           </div>
           <div
             id="preview"
-            dangerouslySetInnerHTML={createMarkup(marked(code, {
-              breaks: true,
-            }))}
+            dangerouslySetInnerHTML={createMarkup(
+              marked(code, {
+                breaks: true,
+              })
+            )}
           />
         </div>
       </div>

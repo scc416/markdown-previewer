@@ -33,14 +33,31 @@ const useData = () => {
     dragging: false,
   });
 
-  const { code, position } = state;
+  const { code, position, dragging } = state;
 
   const updateInput = (event) => {
     const code = event.target.value;
     dispatch({ type: UPDATE, code });
   };
 
-  return { code, position, updateInput };
+  const dragStart = () => {
+    dispatch({ type: DRAGSTART });
+  };
+
+  const dragMove = (touch) => {
+    return (e) => {
+      if (dragging) {
+        const posX = touch ? e.touches[0].clientX : e.clientX;
+        const position = (posX / window.innerWidth) * 100;
+        dispatch({ type: DRAGMOVE, position });
+      }
+    };
+  };
+
+  const dragEnd = () => {
+    dispatch({ type: DRAGEND });
+  };
+  return { code, position, updateInput, dragStart, dragMove, dragEnd };
 };
 
 export default useData;
