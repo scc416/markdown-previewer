@@ -19,44 +19,44 @@ const App = () => {
         userSelect: !dragging,
         cursor: dragging ? "col-resize" : "default",
       }}
+      onMouseMove={dragMove()}
+      onMouseUp={dragEnd}
     >
-      <div className="container" onMouseMove={dragMove()} onMouseUp={dragEnd}>
-        <div className="left" style={{ width: position + "%" }}>
-          <div className="editor-title">
-            <i className="far fa-edit"></i> Editor
-          </div>
-          <textarea
-            className="editor"
-            value={code}
-            onChange={updateInput}
-            disabled={dragging}
-          ></textarea>
+      <div className="left" style={{ width: position + "%" }}>
+        <div className="editor-title">
+          <i className="far fa-edit"></i> Editor
+        </div>
+        <textarea
+          className="editor"
+          value={code}
+          onChange={updateInput}
+          disabled={dragging}
+        ></textarea>
+      </div>
+      <div
+        className="border"
+        style={{ left: position + "%" }}
+        onMouseDown={dragStart}
+        onTouchStart={dragStart}
+        onTouchMove={dragMove(true)}
+        onTouchEnd={dragEnd}
+      >
+        <div className="textbox">
+          <i className="fas fa-arrows-alt-h"></i>DRAG ME
+        </div>
+      </div>
+      <div className="right" style={{ width: 100 - position + "%" }}>
+        <div className="previewer-title">
+          <i className="fas fa-eye"></i> Preview
         </div>
         <div
-          className="border"
-          style={{ left: position + "%" }}
-          onMouseDown={dragStart}
-          onTouchStart={dragStart}
-          onTouchMove={dragMove(true)}
-          onTouchEnd={dragEnd}
-        >
-          <div className="textbox">
-            <i className="fas fa-arrows-alt-h"></i>DRAG ME
-          </div>
-        </div>
-        <div className="right" style={{ width: 100 - position + "%" }}>
-          <div className="previewer-title">
-            <i className="fas fa-eye"></i> Preview
-          </div>
-          <div
-            className="preview"
-            dangerouslySetInnerHTML={createMarkup(
-              marked(code, {
-                breaks: true,
-              })
-            )}
-          />
-        </div>
+          className="preview"
+          dangerouslySetInnerHTML={createMarkup(
+            marked(code, {
+              breaks: true,
+            })
+          )}
+        />
       </div>
     </main>
   );

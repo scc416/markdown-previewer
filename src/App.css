@@ -16,12 +16,7 @@ main {
   height: 100vh;
   margin: 0;
   padding: 0;
-}
-
-.container {
   display: flex;
-  width: 100%;
-  height: 100%;
 }
 
 .left {
@@ -45,9 +40,9 @@ main {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-  color: #FFF;
+  color: #fff;
   background-color: #192740;
-  font-family: 'Source Code Pro';
+  font-family: "Source Code Pro";
   padding: 0.5em;
 }
 
@@ -57,11 +52,11 @@ main {
   overflow-y: scroll;
   font-family: Roboto;
   padding: 1.8em 0.4em 0.4em 0.4em;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 code {
-  font-family: 'Source Code Pro';
+  font-family: "Source Code Pro";
 }
 
 .editor-title {
@@ -96,10 +91,10 @@ code {
   position: fixed;
   bottom: 2%;
   background-color: #4b6d90;
-  color: #FFF;
+  color: #fff;
   padding: 0.2em 0.5em 0.5em 0.5em;
   vertical-align: center;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   border-radius: 0.5em;
   user-select: none;
 }
