@@ -97,10 +97,10 @@ code {
   bottom: 2%;
   background-color: #4b6d90;
   color: #FFF;
-  padding: 0.5em;
+  padding: 0.2em 0.5em 0.5em 0.5em;
   vertical-align: center;
   font-family: 'Roboto';
-  border-radius: 10px;
+  border-radius: 0.5em;
   user-select: none;
 }
 
