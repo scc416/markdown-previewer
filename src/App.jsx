@@ -1,10 +1,7 @@
 import "./App.css";
 import useData from "./hooks/useData";
 import { marked } from "marked";
-
-const createMarkup = (__html) => {
-  return { __html };
-};
+import createMarkup from "./helper/createMarkup";
 
 const App = () => {
   const {
