@@ -1,6 +1,13 @@
 import "./App.css";
+import useData from "./hooks/useData";
+import { marked } from "marked";
 
-function App() {
+const createMarkup = (__html) => {
+  return { __html };
+};
+
+const App = () => {
+  const { code, position } = useData();
   return (
     <div id="app">
       <div
@@ -17,7 +24,7 @@ function App() {
           </div>
           <textarea
             id="editor"
-            // value={this.props.code}
+            value={code}
             // onChange={this.props.update}
           ></textarea>
         </div>
@@ -37,11 +44,16 @@ function App() {
           <div className="previewer-title">
             <i className="fas fa-eye"></i> Preview
           </div>
-          <div id="preview" />
+          <div
+            id="preview"
+            dangerouslySetInnerHTML={createMarkup(marked(code, {
+              breaks: true,
+            }))}
+          />
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default App;
