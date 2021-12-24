@@ -7,16 +7,16 @@ const createMarkup = (__html) => {
 };
 
 const App = () => {
-  const { code, position, updateInput, dragStart, dragMove, dragEnd } =
+  const { code, position, updateInput, dragStart, dragMove, dragEnd, dragging } =
     useData();
   return (
-    <div id="app">
+    <div id="app" style={{userSelect: !dragging}}>
       <div className="container" onMouseMove={dragMove()} onMouseUp={dragEnd}>
         <div id="left" style={{ width: position + "%" }}>
           <div className="editor-title">
             <i className="far fa-edit"></i> Editor
           </div>
-          <textarea id="editor" value={code} onChange={updateInput}></textarea>
+          <textarea id="editor" value={code} onChange={updateInput} disabled={dragging}></textarea>
         </div>
         <div
           id="border"

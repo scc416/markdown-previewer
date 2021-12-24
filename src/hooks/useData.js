@@ -57,7 +57,7 @@ const useData = () => {
   const dragEnd = () => {
     dispatch({ type: DRAGEND });
   };
-  return { code, position, updateInput, dragStart, dragMove, dragEnd };
+  return { code, position, updateInput, dragStart, dragMove, dragEnd, dragging };
 };
 
 export default useData;
