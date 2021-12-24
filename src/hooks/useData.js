@@ -1,10 +1,6 @@
 import { useReducer } from "react";
-import startCode from "../startCode";
-
-const UPDATE = "UPDATE";
-const DRAGSTART = "STARTDRAG";
-const DRAGMOVE = "DRAGMOVE";
-const DRAGEND = "STARTEND";
+import startCode from "../constants/startCode";
+import { UPDATE, DRAGSTART, DRAGMOVE, DRAGEND } from "../constants/actionTypes";
 
 const useData = () => {
   const reducers = {
@@ -57,7 +53,15 @@ const useData = () => {
   const dragEnd = () => {
     dispatch({ type: DRAGEND });
   };
-  return { code, position, updateInput, dragStart, dragMove, dragEnd, dragging };
+  return {
+    code,
+    position,
+    updateInput,
+    dragStart,
+    dragMove,
+    dragEnd,
+    dragging,
+  };
 };
 
 export default useData;
