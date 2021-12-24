@@ -1,23 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
-/* override browser default */
-html,
-body {
+* {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-/* use viewport-relative units to cover page fully */
-body {
-  height: 100vh;
-  width: 100vw;
-}
-
-/* include border and padding in element width and height */
-* {
   box-sizing: border-box;
 }
 
@@ -25,7 +11,7 @@ img {
   max-width: 100%;
 }
 
-#app {
+main {
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -38,23 +24,23 @@ img {
   height: 100%;
 }
 
-#left {
-  padding: 10px 10px 10px 5px;
+.left {
+  padding: 0.5em;
   height: 100%;
   display: flex;
   flex-direction: column;
   background-color: #b8d1e0;
 }
 
-#right {
-  padding: 10px 5px 10px 10px;
+.right {
+  padding: 0.5em;
   height: 100%;
   display: flex;
   flex-direction: column;
   background-color: #85aed0;
 }
 
-#editor {
+.editor {
   resize: none;
   width: 100%;
   height: 100%;
@@ -65,7 +51,7 @@ img {
   padding: 10px;
 }
 
-#preview {
+.preview {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
@@ -76,7 +62,7 @@ img {
 }
 
 code {
-  font-family: Source Code Pro;
+  font-family: 'Source Code Pro';
 }
 
 .editor-title {
@@ -97,7 +83,7 @@ code {
   user-select: none;
 }
 
-#border {
+.border {
   height: 100%;
   background-color: #4b6d90;
   width: 10px;
