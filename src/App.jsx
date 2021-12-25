@@ -7,7 +7,6 @@ import Border from "./components/Border";
 const App = () => {
   const {
     code,
-    position,
     updateInput,
     dragStart,
     dragMove,
@@ -15,7 +14,8 @@ const App = () => {
     mainStyle,
     editorStyle,
     leftStyle,
-    rightStyle
+    rightStyle,
+    borderClass
   } = useData();
 
   return (
@@ -23,11 +23,8 @@ const App = () => {
       <div className="left container" style={leftStyle}>
         <Editor {...{ code, updateInput, editorStyle }} />
       </div>
-      <Border {...{ dragStart, dragMove, dragEnd }} />
-      <div
-        className="right container"
-        style={rightStyle}
-      >
+      <Border {...{ dragStart, dragMove, dragEnd, borderClass }} />
+      <div className="right container" style={rightStyle}>
         <Preview {...{ code }} />
       </div>
     </main>

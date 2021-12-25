@@ -1,4 +1,4 @@
-const Border = ({ position, dragStart, dragMove, dragEnd }) => {
+const Border = ({ dragStart, dragMove, dragEnd, borderClass }) => {
   return (
     <>
       <div
@@ -10,7 +10,7 @@ const Border = ({ position, dragStart, dragMove, dragEnd }) => {
       >
         <div className="drag-label">
           <span>
-            <i className="fas fa-arrows-alt-h"></i>DRAG ME
+            <i className={borderClass}></i>DRAG ME
           </span>
         </div>
       </div>

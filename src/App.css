@@ -94,11 +94,16 @@ code {
   display: inline-block;
 }
 
-.fa-arrows-alt-h {
+.fa-arrows-alt-h,
+.fa-arrows-alt-v {
   animation-name: rotate;
   animation-duration: 750ms;
   animation-iteration-count: infinite;
   position: relative;
+}
+
+.fa-arrows-alt-h {
+  left: 0.05em;
 }
 
 @keyframes rotate {
@@ -125,22 +130,17 @@ code {
     z-index: 1;
     cursor: col-resize;
   }
-  
+
   .drag-label {
     writing-mode: vertical-rl;
     top: 20%;
-    left: 0;
-    right: 0.78em;
+    left: auto;
+    right: 0.85em;
     padding: 0.2em 0.5em 0.47em 0.5em;
     user-select: none;
   }
-  
+
   .drag-label span {
     position: relative;
-    right: 0.05em;
-  }
-  
-  .fa-arrows-alt-h {
-    left: 0.05em;
   }
 }

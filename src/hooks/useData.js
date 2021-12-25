@@ -81,12 +81,13 @@ const useData = () => {
   const editorStyle = { cursor: dragging ? "col-resize" : "default" };
 
   const unit = row ? "Width" : "Height";
-  const leftStyle = { [`min${unit}`] : position - 0.5 + "%" };
+  const leftStyle = { [`min${unit}`]: position - 0.5 + "%" };
   const rightStyle = { [`max${unit}`]: 99.5 - position + "%" };
+
+  const borderClass = row ? "fas fa-arrows-alt-h" : "fas fa-arrows-alt-v";
 
   return {
     code,
-    position,
     updateInput,
     dragStart,
     dragMove,
@@ -94,7 +95,8 @@ const useData = () => {
     mainStyle,
     editorStyle,
     leftStyle,
-    rightStyle
+    rightStyle,
+    borderClass,
   };
 };
 
