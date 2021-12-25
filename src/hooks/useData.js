@@ -36,9 +36,7 @@ const useData = () => {
     dispatch({ type: UPDATE, code });
   };
 
-  const dragStart = () => {
-    dispatch({ type: DRAGSTART });
-  };
+  const dragStart = () => dispatch({ type: DRAGSTART });
 
   const dragMove = (touch) => {
     return (e) => {
@@ -50,10 +48,8 @@ const useData = () => {
     };
   };
 
-  const dragEnd = () => {
-    console.log("UP")
-    dispatch({ type: DRAGEND });
-  };
+  const dragEnd = () => dispatch({ type: DRAGEND });
+
   return {
     code,
     position,
