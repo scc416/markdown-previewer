@@ -1,4 +1,4 @@
-const Editor = ({ code, updateInput, dragging }) => {
+const Editor = ({ code, updateInput, editorStyle }) => {
   return (
     <>
       <div className="title">
@@ -8,7 +8,7 @@ const Editor = ({ code, updateInput, dragging }) => {
         className="editor inner-container"
         value={code}
         onChange={updateInput}
-        style={{ cursor: dragging ? "col-resize" : "default" }}
+        style={editorStyle}
       ></textarea>
     </>
   );

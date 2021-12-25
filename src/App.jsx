@@ -2,6 +2,7 @@ import "./App.css";
 import useData from "./hooks/useData";
 import Preview from "./components/Preview";
 import Editor from "./components/Editor";
+import Border from "./components/Border";
 
 const App = () => {
   const {
@@ -11,33 +12,19 @@ const App = () => {
     dragStart,
     dragMove,
     dragEnd,
-    dragging,
+    mainStyle,
+    editorStyle
   } = useData();
-  console.log(dragging);
   return (
     <main
-      style={{
-        userSelect: dragging ? "none" : "default",
-        cursor: dragging ? "col-resize" : "default",
-      }}
+      style={mainStyle}
       onMouseMove={dragMove()}
       onMouseUp={dragEnd}
     >
       <div className="left container" style={{ width: position + "%" }}>
-        <Editor {...{ code, updateInput, dragging }} />
+        <Editor {...{ code, updateInput, editorStyle }} />
       </div>
-      <div
-        className="border"
-        style={{ left: position + "%" }}
-        onMouseDown={dragStart}
-        onTouchStart={dragStart}
-        onTouchMove={dragMove(true)}
-        onTouchEnd={dragEnd}
-      >
-        <div className="drag-label">
-          <i className="fas fa-arrows-alt-h"></i>DRAG ME
-        </div>
-      </div>
+      <Border {...{ position, dragStart, dragMove, dragEnd }} />
       <div className="right container" style={{ width: 100 - position + "%" }}>
         <Preview {...{ code }} />
       </div>

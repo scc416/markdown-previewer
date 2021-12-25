@@ -50,6 +50,13 @@ const useData = () => {
 
   const dragEnd = () => dispatch({ type: DRAGEND });
 
+  const mainStyle = {
+    userSelect: dragging ? "none" : "default",
+    cursor: dragging ? "col-resize" : "default",
+  };
+
+  const editorStyle = { cursor: dragging ? "col-resize" : "default" };
+
   return {
     code,
     position,
@@ -57,7 +64,8 @@ const useData = () => {
     dragStart,
     dragMove,
     dragEnd,
-    dragging,
+    mainStyle,
+    editorStyle,
   };
 };
 
