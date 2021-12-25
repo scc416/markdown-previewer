@@ -13,10 +13,11 @@ const App = () => {
     dragEnd,
     dragging,
   } = useData();
+  console.log(dragging);
   return (
     <main
       style={{
-        userSelect: !dragging,
+        userSelect: dragging ? "none" : "default",
         cursor: dragging ? "col-resize" : "default",
       }}
       onMouseMove={dragMove()}
@@ -30,7 +31,7 @@ const App = () => {
           className="editor"
           value={code}
           onChange={updateInput}
-          disabled={dragging}
+          style={{ cursor: dragging ? "col-resize" : "default" }}
         ></textarea>
       </div>
       <div

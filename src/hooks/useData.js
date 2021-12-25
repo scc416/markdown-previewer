@@ -51,6 +51,7 @@ const useData = () => {
   };
 
   const dragEnd = () => {
+    console.log("UP")
     dispatch({ type: DRAGEND });
   };
   return {
