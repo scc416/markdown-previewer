@@ -1,6 +1,6 @@
 # Markdown Previewer
 
-A web page that take in text ([Markdown](https://daringfireball.net/projects/markdown/) syntax) from users and display the preview.  
+A web app that take in [Markdown](https://daringfireball.net/projects/markdown/) syntax from users and display the preview.  
 This is one of my project for [Front End Development Libraries Projects](https://www.freecodecamp.org/learn/front-end-development-libraries/) on [freeCodeCamp](https://www.freecodecamp.org/): [Build a Markdown Previewer](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-markdown-previewer).
 
 ## Table of Content
