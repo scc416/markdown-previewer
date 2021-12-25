@@ -17,7 +17,7 @@ https://previewer-md.netlify.app/
 
 ## Final Product
 
-| ![desktop](./docs/desktop.png) |
+| ![desktop](./docs/desktop.gif) |
 | :----------------------------: |
 |   _The web page on desktop_    |
 
