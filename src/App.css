@@ -81,7 +81,7 @@ code {
   writing-mode: vertical-rl;
   position: relative;
   top: 20%;
-  right: 0.65em;
+  right: 0.7em;
   background-color: #e8a598;
   color: #fff;
   padding: 0.2em 0.5em 0.5em 0.5em;
@@ -96,6 +96,7 @@ code {
   animation-duration: 750ms;
   animation-iteration-count: infinite;
   position: relative;
+  left: 0.05em;
 }
 
 @keyframes rotate {
