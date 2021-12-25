@@ -1,7 +1,6 @@
 import "./App.css";
 import useData from "./hooks/useData";
-import { marked } from "marked";
-import createMarkup from "./helper/createMarkup";
+import Preview from "./components/Preview";
 
 const App = () => {
   const {
@@ -47,17 +46,7 @@ const App = () => {
         </div>
       </div>
       <div className="right container" style={{ width: 100 - position + "%" }}>
-        <div className="title">
-          <i className="fas fa-eye"></i> Preview
-        </div>
-        <div
-          className="preview inner-container"
-          dangerouslySetInnerHTML={createMarkup(
-            marked(code, {
-              breaks: true,
-            })
-          )}
-        />
+        <Preview {...{ code }} />
       </div>
     </main>
   );
