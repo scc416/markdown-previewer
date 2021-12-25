@@ -1,18 +1,19 @@
 # Markdown Previewer
 
-A web page that displays random quote. This is one of my project for [Front End Development Libraries Projects](https://www.freecodecamp.org/learn/front-end-development-libraries/) on [freeCodeCamp](https://www.freecodecamp.org/): [Build a Random Quote Machine](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-random-quote-machine).
+A web page that take in text ([Markdown](https://daringfireball.net/projects/markdown/) syntax) from users and display the preview. This is one of my project for [Front End Development Libraries Projects](https://www.freecodecamp.org/learn/front-end-development-libraries/) on [freeCodeCamp](https://www.freecodecamp.org/): [Build a Markdown Previewer](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-markdown-previewer).
 
 ## Table of Content
 
 - [Live Demo](#live-demo)
 - [Final Product](#final-product)
+- [Dependencies](#dependencies)
 - [Getting Started](#getting-started)
 - [Credit](#credit)
 
 ## Live demo
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It is deployed to [Netlify](https://www.netlify.com/):  
-https://the-quote.netlify.app/
+https://previewer-md.netlify.app/
 
 ## Final Product
 
@@ -24,6 +25,12 @@ https://the-quote.netlify.app/
 | :--------------------------: |
 |   _The web page on mobile_   |
 
+## Dependencies
+
+- [React](https://reactjs.org/): library for building the UI
+- [Marked](https://marked.js.org/): parse Markdown
+- [Font Awesome](https://fontawesome.com/): for icons
+
 ## Getting Started
 
 1. Clone or download this repository onto your local device.
@@ -34,5 +41,4 @@ https://the-quote.netlify.app/
 
 ## Credit
 
-- Background photo by Kon Karampelas on [Unsplash](https://unsplash.com/).
-- Favicons made by [Freepik](https://www.flaticon.com/authors/freepik) from [https://www.flaticon.com/](https://www.flaticon.com/).
+- Favicons made by [prettycons](https://www.flaticon.com/authors/prettycons) from [www.flaticon.com](https://www.flaticon.com/).
