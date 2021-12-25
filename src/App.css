@@ -27,11 +27,11 @@ main {
 }
 
 .left {
-  background-color: #b8d1e0;
+  background-color: #fec5bb;
 }
 
 .right {
-  background-color: #85aed0;
+  background-color: #d8e2dc;
 }
 
 .inner-container {
@@ -41,16 +41,16 @@ main {
   overflow-y: scroll;
 }
 
-.editor {
+textarea {
   resize: none;
-  color: #fff;
-  background-color: #192740;
+  background-color: #f8edeb;
   font-family: "Source Code Pro";
+  border: none;
 }
 
 .preview {
   font-family: 'Roboto';
-  background-color: #fff;
+  background-color: #eff4f1;
 }
 
 code {
@@ -67,7 +67,7 @@ code {
 
 .border {
   height: 100%;
-  background-color: #4b6d90;
+  background-color: #e8a598;
   width: 0.5em;
   z-index: 1;
   cursor: col-resize;
@@ -75,9 +75,10 @@ code {
 
 .drag-label {
   writing-mode: vertical-rl;
-  position: fixed;
-  bottom: 2%;
-  background-color: #4b6d90;
+  position: relative;
+  top: 20%;
+  right: 0.85em;
+  background-color: #e8a598;
   color: #fff;
   padding: 0.2em 0.5em 0.5em 0.5em;
   vertical-align: center;
