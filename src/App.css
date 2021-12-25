@@ -19,7 +19,7 @@ main {
 }
 
 .container {
-  padding: 0.5em;
+  padding: 0.5em 1.5em 1.5em 1.5em;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -80,18 +80,19 @@ code {
   z-index: 1;
   cursor: row-resize;
   align-self: flex-start;
+  position: relative;
 }
 
 .drag-label {
-  position: relative;
   background-color: #e8a598;
   color: #fff;
   font-family: "Roboto";
   border-radius: 0.6em;
   user-select: none;
-  left: 0.5em;
   padding: 0.6em;
+  left: 5%;
   display: inline-block;
+  position: relative;
 }
 
 .fa-arrows-alt-h,
@@ -101,10 +102,6 @@ code {
   animation-iteration-count: infinite;
   position: relative;
   top: auto;
-}
-
-.fa-arrows-alt-h {
-  left: 0.05em;
 }
 
 @keyframes rotate {
@@ -132,9 +129,8 @@ code {
 
   .drag-label {
     writing-mode: vertical-rl;
-    top: 20%;
+    top: 10%;
     left: auto;
-    right: 0.9em;
     padding: 0.2em 0.5em 0.5em 0.5em;
     user-select: none;
   }
