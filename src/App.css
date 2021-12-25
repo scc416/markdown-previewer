@@ -68,7 +68,7 @@ code {
 .border {
   height: 100%;
   background-color: #e8a598;
-  width: 0.5em;
+  width: 0.8em;
   z-index: 1;
   cursor: col-resize;
 }
@@ -77,7 +77,7 @@ code {
   writing-mode: vertical-rl;
   position: relative;
   top: 20%;
-  right: 0.85em;
+  right: 0.65em;
   background-color: #e8a598;
   color: #fff;
   padding: 0.2em 0.5em 0.5em 0.5em;
