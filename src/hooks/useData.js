@@ -74,11 +74,13 @@ const useData = () => {
 
   const dragEnd = () => dispatch({ type: DRAGEND });
 
+  const cursor = dragging ? (row ? "col-resize" : "row-resize") : "default";
+
   const mainStyle = {
+    cursor,
     userSelect: dragging ? "none" : "default",
-    cursor: dragging ? "col-resize" : "default",
   };
-  const editorStyle = { cursor: dragging ? "col-resize" : "default" };
+  const editorStyle = { cursor };
 
   const unit = row ? "Width" : "Height";
   const leftStyle = { [`min${unit}`]: position - 0.5 + "%" };

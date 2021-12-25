@@ -10,7 +10,7 @@ const Border = ({ dragStart, dragMove, dragEnd, borderClass }) => {
       >
         <div className="drag-label">
           <span>
-            <i className={borderClass}></i>DRAG ME
+            <i className={borderClass}></i> DRAG ME
           </span>
         </div>
       </div>
