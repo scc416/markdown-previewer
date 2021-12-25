@@ -21,7 +21,7 @@ https://previewer-md.netlify.app/
 | :----------------------------: |
 |   _The web page on desktop_    |
 
-| ![mobile](./docs/mobile.png) |
+| ![mobile](./docs/mobile.gif) |
 | :--------------------------: |
 |   _The web page on mobile_   |
 
