@@ -48,8 +48,12 @@ textarea {
   border: none;
 }
 
+textarea:focus {
+  outline: none;
+}
+
 .preview {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   background-color: #eff4f1;
 }
 
