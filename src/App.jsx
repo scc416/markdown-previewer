@@ -23,12 +23,12 @@ const App = () => {
       onMouseMove={dragMove()}
       onMouseUp={dragEnd}
     >
-      <div className="left" style={{ width: position + "%" }}>
-        <div className="editor-title">
+      <div className="left container" style={{ width: position + "%" }}>
+        <div className="title">
           <i className="far fa-edit"></i> Editor
         </div>
         <textarea
-          className="editor"
+          className="editor inner-container"
           value={code}
           onChange={updateInput}
           style={{ cursor: dragging ? "col-resize" : "default" }}
@@ -42,16 +42,16 @@ const App = () => {
         onTouchMove={dragMove(true)}
         onTouchEnd={dragEnd}
       >
-        <div className="textbox">
+        <div className="drag-label">
           <i className="fas fa-arrows-alt-h"></i>DRAG ME
         </div>
       </div>
-      <div className="right" style={{ width: 100 - position + "%" }}>
-        <div className="previewer-title">
+      <div className="right container" style={{ width: 100 - position + "%" }}>
+        <div className="title">
           <i className="fas fa-eye"></i> Preview
         </div>
         <div
-          className="preview"
+          className="preview inner-container"
           dangerouslySetInnerHTML={createMarkup(
             marked(code, {
               breaks: true,

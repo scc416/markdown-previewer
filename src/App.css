@@ -19,39 +19,37 @@ main {
   display: flex;
 }
 
-.left {
+.container {
   padding: 0.5em;
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.left {
   background-color: #b8d1e0;
 }
 
 .right {
-  padding: 0.5em;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
   background-color: #85aed0;
+}
+
+.inner-container {
+  width: 100%;
+  height: 100%;
+  padding: 0.5em;
+  overflow-y: scroll;
 }
 
 .editor {
   resize: none;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
   color: #fff;
   background-color: #192740;
   font-family: "Source Code Pro";
-  padding: 0.5em;
 }
 
 .preview {
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  font-family: Roboto;
-  padding: 1.8em 0.4em 0.4em 0.4em;
+  font-family: 'Roboto';
   background-color: #fff;
 }
 
@@ -59,22 +57,11 @@ code {
   font-family: "Source Code Pro";
 }
 
-.editor-title {
+.title {
   text-align: center;
   font-size: 1.1em;
   font-family: Source Code Pro;
   padding: 0.3em;
-  user-select: none;
-}
-
-.previewer-title {
-  position: absolute;
-  background-color: #85aed0;
-  padding: 0.5em 0.7em 0.5em 0.5em;
-  font-family: Source Code Pro;
-  top: 0;
-  right: 0;
-  font-size: 1.1em;
   user-select: none;
 }
 
@@ -86,7 +73,7 @@ code {
   cursor: col-resize;
 }
 
-.textbox {
+.drag-label {
   writing-mode: vertical-rl;
   position: fixed;
   bottom: 2%;
