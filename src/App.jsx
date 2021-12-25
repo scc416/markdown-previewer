@@ -13,19 +13,21 @@ const App = () => {
     dragMove,
     dragEnd,
     mainStyle,
-    editorStyle
+    editorStyle,
+    leftStyle,
+    rightStyle
   } = useData();
+
   return (
-    <main
-      style={mainStyle}
-      onMouseMove={dragMove()}
-      onMouseUp={dragEnd}
-    >
-      <div className="left container" style={{ width: position + "%" }}>
+    <main style={mainStyle} onMouseMove={dragMove()} onMouseUp={dragEnd}>
+      <div className="left container" style={leftStyle}>
         <Editor {...{ code, updateInput, editorStyle }} />
       </div>
-      <Border {...{ position, dragStart, dragMove, dragEnd }} />
-      <div className="right container" style={{ width: 100 - position + "%" }}>
+      <Border {...{ dragStart, dragMove, dragEnd }} />
+      <div
+        className="right container"
+        style={rightStyle}
+      >
         <Preview {...{ code }} />
       </div>
     </main>

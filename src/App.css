@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-
-* {
+body,
+div {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,6 +15,7 @@ main {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -32,6 +31,7 @@ main {
 
 .right {
   background-color: #d8e2dc;
+  flex: 1 1 auto;
 }
 
 .inner-container {
@@ -46,6 +46,8 @@ textarea {
   background-color: #f8edeb;
   font-family: "Source Code Pro";
   border: none;
+  box-sizing: border-box;
+  font-size: 1.05em;
 }
 
 textarea:focus {
@@ -55,6 +57,8 @@ textarea:focus {
 .preview {
   font-family: "Roboto";
   background-color: #eff4f1;
+  width: 100%;
+  max-width: 100%;
 }
 
 code {
@@ -70,25 +74,24 @@ code {
 }
 
 .border {
-  height: 100%;
+  width: 100%;
+  height: 1%;
   background-color: #e8a598;
-  width: 0.8em;
   z-index: 1;
   cursor: col-resize;
+  align-self: flex-start;
 }
 
 .drag-label {
-  writing-mode: vertical-rl;
   position: relative;
-  top: 20%;
-  right: 0.7em;
   background-color: #e8a598;
   color: #fff;
-  padding: 0.2em 0.5em 0.5em 0.5em;
-  vertical-align: center;
   font-family: "Roboto";
-  border-radius: 0.5em;
+  border-radius: 0.6em;
   user-select: none;
+  left: 0.5em;
+  padding: 0.6em;
+  display: inline-block;
 }
 
 .fa-arrows-alt-h {
@@ -96,7 +99,6 @@ code {
   animation-duration: 750ms;
   animation-iteration-count: infinite;
   position: relative;
-  left: 0.05em;
 }
 
 @keyframes rotate {
@@ -108,5 +110,37 @@ code {
   }
   100% {
     top: 2%;
+  }
+}
+
+@media (min-width: 576px) {
+  main {
+    flex-direction: row;
+  }
+
+  .border {
+    height: 100%;
+    background-color: #e8a598;
+    width: 1%;
+    z-index: 1;
+    cursor: col-resize;
+  }
+  
+  .drag-label {
+    writing-mode: vertical-rl;
+    top: 20%;
+    left: 0;
+    right: 0.78em;
+    padding: 0.2em 0.5em 0.47em 0.5em;
+    user-select: none;
+  }
+  
+  .drag-label span {
+    position: relative;
+    right: 0.05em;
+  }
+  
+  .fa-arrows-alt-h {
+    left: 0.05em;
   }
 }

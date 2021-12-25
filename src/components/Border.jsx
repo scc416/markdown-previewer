@@ -3,14 +3,15 @@ const Border = ({ position, dragStart, dragMove, dragEnd }) => {
     <>
       <div
         className="border"
-        style={{ left: position + "%" }}
         onMouseDown={dragStart}
         onTouchStart={dragStart}
         onTouchMove={dragMove(true)}
         onTouchEnd={dragEnd}
       >
         <div className="drag-label">
-          <i className="fas fa-arrows-alt-h"></i>DRAG ME
+          <span>
+            <i className="fas fa-arrows-alt-h"></i>DRAG ME
+          </span>
         </div>
       </div>
     </>
