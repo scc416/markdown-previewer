@@ -68,7 +68,7 @@ code {
 .title {
   text-align: center;
   font-size: 1.1em;
-  font-family: Source Code Pro;
+  font-family: 'Source Code Pro';
   padding: 0.3em;
   user-select: none;
 }
@@ -95,23 +95,24 @@ code {
   position: relative;
 }
 
-.fa-arrows-alt-h,
-.fa-arrows-alt-v {
+.drag-label span {
   animation-name: rotate;
-  animation-duration: 750ms;
+  animation-duration: 1000ms;
   animation-iteration-count: infinite;
   position: relative;
-  top: auto;
 }
 
 @keyframes rotate {
   0% {
+    right: 2%;
     top: 2%;
   }
   50% {
+    right: -2%;
     top: -2%;
   }
   100% {
+    right: 2%;
     top: 2%;
   }
 }
